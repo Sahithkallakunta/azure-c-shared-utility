@@ -273,6 +273,9 @@ phases:
   - script: |
      if [ -f "jenkins/debian_c.sh" ]
      then
+      sudo
+      ls
+      pwd
       sudo jenkins/debian_c.sh
      fi
     displayName: 'build'
