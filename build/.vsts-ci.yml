@@ -273,8 +273,7 @@ phases:
   - script: |
      if [ -f "jenkins/debian_c.sh" ]
      then
-      sudo apt-get install sudo
-      sudo ./jenkins/debian_c.sh
+      sudo jenkins/debian_c.sh
      fi
     displayName: 'build'
     env:
