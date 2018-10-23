@@ -165,7 +165,7 @@ phases:
     condition: always()      
 - phase: OSX
   queue:
-    name: Hosted macOS
+    name: OSX
   steps:
   - script: |
      if [ -f "jenkins/osx_gcc_openssl.sh" ]
@@ -273,6 +273,8 @@ phases:
   - script: |
      if [ -f "jenkins/debian_c.sh" ]
      then
+      sudo chmod 755 jenkins/debian_c.sh
+      sudo -E ./debian_c.sh
       sudo jenkins/debian_c.sh
      fi
     displayName: 'build'
