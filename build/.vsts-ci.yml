@@ -26,7 +26,7 @@ phases:
     name: 'aziotbld-win03'
   steps:
   - script: |
-     if exist jenkins\windows_c.cmd(
+     if exist jenkins\windows_c.cmd (
       call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat"
       call jenkins\windows_c.cmd)
     displayName: 'build'
@@ -272,11 +272,8 @@ phases:
   steps:
   - script: |
      if [ -f "jenkins/debian_c.sh" ]
-     then
-      sudo
-      ls
-      pwd
-      sudo './jenkins/debian_c.sh'
+     then 
+      sudo ./jenkins/debian_c.sh
      fi
     displayName: 'build'
     env:
